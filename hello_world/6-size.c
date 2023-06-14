@@ -2,7 +2,7 @@
 
 /**
  * main - a voir plus tard
- * return: sucess
+ * Return: sucess
  */
 
 int main(void)
