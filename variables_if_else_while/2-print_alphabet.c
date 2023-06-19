@@ -13,5 +13,7 @@ int main(void)
 	{
 		putchar (alphabet);
 	}
+	printf("\n");
+
 	return (0);
 }
