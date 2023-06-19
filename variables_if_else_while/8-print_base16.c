@@ -9,7 +9,7 @@ int main(void)
 {
 	int hexa;
 
-	for (hexa = 0 ; 0 < 10 ; hexa++)
+	for (hexa = 0 ; hexa < 10 ; hexa++)
 	{
 		putchar(hexa + '0');
 	}
