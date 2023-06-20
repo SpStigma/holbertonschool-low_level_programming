@@ -12,7 +12,7 @@ void times_table(void)
 		{
 			int result = 9 * n;
 
-			_putchar(result);
+			_putchar(result + '0');
 			_putchar('\n');
 		}
 }
