@@ -12,7 +12,7 @@ void times_table(void)
 
 		for (n = 0 ; n <= 9 ; n++)
 		{
-			for (m = 0 ; m <= 9 ; m++)
+			for (m = 0 ; m <= 8 ; m++)
 			{
 			int result = n * m;
 
@@ -30,6 +30,7 @@ void times_table(void)
 				_putchar(',');
 				_putchar(' ');
 			}
+			_putchar(n * 9);
 		}
 		_putchar('\n');
 }
