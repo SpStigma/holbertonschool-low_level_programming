@@ -20,6 +20,5 @@ void jack_bauer(void)
 			putchar('0' + (minutes % 10));   /* Même chose que pour l'heure */
 			putchar('\n');
 		}
-
-
 	}
+}
