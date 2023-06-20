@@ -13,12 +13,12 @@ void jack_bauer(void)
 	{
 		for (minutes = 0 ; minutes < 60 ; minutes++)
 		{
-			putchar('0' + (hours / 10));     /*affiche les dizaines*/
-			putchar('0' + (hours % 10));     /*affiche les unités genre le 5 de 15*/
-			putchar(':');
-			putchar('0' + (minutes / 10));   /* Même chose que pour l'heure */
-			putchar('0' + (minutes % 10));   /* Même chose que pour l'heure */
-			putchar('\n');
+			_putchar('0' + (hours / 10));     /*affiche les dizaines*/
+			_putchar('0' + (hours % 10));     /*affiche les unités genre le 5 de 15*/
+			_putchar(':');
+			_putchar('0' + (minutes / 10));   /* Même chose que pour l'heure */
+			_putchar('0' + (minutes % 10));   /* Même chose que pour l'heure */
+			_putchar('\n');
 		}
 	}
 }
