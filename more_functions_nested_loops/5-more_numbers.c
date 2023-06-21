@@ -1,9 +1,7 @@
 #include "main.h"
 
 /**
- *
- *
- *
+ * more_numbers - itération de 10 de la suite 0 a 14
  */
 
 void more_numbers(void)
