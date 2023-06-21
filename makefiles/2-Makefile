@@ -7,3 +7,6 @@ ALL: $(NAME)
 
 school: $(SRC) $(OBJ)
 	$(CC) $(SRC) $(OBJ) -o $(NAME)
+
+clean :
+	rm -rf *.o
