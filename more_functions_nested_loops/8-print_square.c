@@ -1,9 +1,8 @@
 #include "main.h"
 
 /**
- *
- *
- *
+ * print_square - display a square
+ * @size: nombre de fois #
  */
 
 void print_square(int size)
