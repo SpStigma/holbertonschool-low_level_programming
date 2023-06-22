@@ -2,6 +2,7 @@
 
 /**
  * print_triangle - affiche u, triangle
+ * @size: taille du triangle
  *
  * Return: to sucess
  */
