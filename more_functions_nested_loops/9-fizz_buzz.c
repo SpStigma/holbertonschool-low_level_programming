@@ -13,6 +13,7 @@ int main(void)
 	for (; n <= 100 ; n++)
 	{
 		printf(" ");
+	}
 
 		if ( n % 3)
 			printf("Fizz");
