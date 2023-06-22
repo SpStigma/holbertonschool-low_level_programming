@@ -20,18 +20,18 @@ int main(void)
 		else if ((n % 3) == 0)
 		{
 			printf("Fizz");
-			
+
 		}
 		else if ((n % 5) == 0)
 		{
 			printf("Buzz");
 		}
-		else 
+		else
 		{
 			printf("%d", n);
 
 		}
-		if ( n < 100)
+		if (n < 100)
 		{
 			printf(" ");
 		}
