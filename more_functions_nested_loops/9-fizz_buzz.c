@@ -13,19 +13,19 @@ int main(void)
 	for (; n <= 100 ; n++)
 	{
 		printf(" ");
-	
 
-		if (n % 3 == 0)
+
+		if ((n % 3) == 0)
 		{
 			printf("Fizz");
 		}
-		if (n % 5 == 0)
+		if ((n % 5) == 0)
 		{
-		printf("Buzz");
+			printf("Buzz");
 		}
-		if (n % 3 == 0 && n % 5 ==0)
+		if ((n % 3) == 0 && (n % 5) ==0)
 		{
-		printf("FizzBuzz");
+			printf("FizzBuzz");
 		}
 
 	}
