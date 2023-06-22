@@ -4,6 +4,8 @@
 
 /**
  * main - ecrie si n multiple de 5 et 3
+ *
+ * Return: to sucess
  */
 
 int main(void)
