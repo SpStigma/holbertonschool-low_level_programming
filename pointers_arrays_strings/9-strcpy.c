@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * *_strcpy - 
+ * *_strcpy - overwrite dest avec src
  * @dest: premier pointeur
  * @src: deuxieme pointeur
  *
