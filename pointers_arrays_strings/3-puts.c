@@ -9,11 +9,11 @@
 
 void _puts(char *str)
 {
-	char c;
+	int i = 0;
 
-	for (str ; str[c] != 0 ; c++)
+	while (str[i] != '\0')
 	{
+		putchar(srt[i]);
 	}
-	return (c);
 	_putchar('\n');
 }
