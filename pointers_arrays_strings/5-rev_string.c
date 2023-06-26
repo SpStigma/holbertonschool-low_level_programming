@@ -3,17 +3,21 @@
 /**
  * rev_string - rev a string
  * @s: chaine de caractère
- *
  */
 
 void rev_string(char *s)
 {
-	int lenght = _strlen(s);
+	int lenght = 0;
 	int debut = 0;
-	int fin = lenght -1;
-	char temp;
+	int fin = 0;
+	char temp = 0;
 
-	for (debut = 0 ; debut < fin ; debut++, fin--)
+	while (s[lenght] != '\0')
+	{
+		lenght++;
+	}
+
+	for (debut = 0 ; fin = lenght - 1 ; debut < (lenght / 2) ; debut++, fin--)
 	{
 		temp = s[debut];
 		s[debut] = s[fin];
