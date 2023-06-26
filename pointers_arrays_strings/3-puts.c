@@ -3,8 +3,6 @@
 /**
  * _puts - affiche la phrase
  * @str: la chaine de caractère a imprimer
- *
- *Return: charactère
  */
 
 void _puts(char *str)
@@ -13,7 +11,7 @@ void _puts(char *str)
 
 	while (str[i] != '\0')
 	{
-		putchar(srt[i]);
+		putchar(str[i]);
 	}
 	_putchar('\n');
 }
