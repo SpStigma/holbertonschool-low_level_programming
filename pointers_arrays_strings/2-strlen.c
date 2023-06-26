@@ -9,10 +9,10 @@
 
 int _strlen(char *s)
 {
-	while (*s != '\0')
+	int i = '0';
+
+	for (i = '0' ; s[i] != 0 ; i++)
 	{
-		_putchar("%c");
-		*s++;
 	}
-	return (0);
+	return(i);
 }
