@@ -2,8 +2,9 @@
 #include <stdio.h>
 
 /**
- * print_array - print 
- *
+ * print_array - print
+ * @a: array
+ * @n: nombre de donnée stockée ds array
  */
 
 void print_array(int *a, int n)
@@ -14,5 +15,6 @@ void print_array(int *a, int n)
 	{
 		printf("%d, ", a[i]);
 	}
-	printf('\n');
+
+	printf("\n");
 }
