@@ -2,11 +2,12 @@
 
 /**
  * *string_toupper - convertir all lower to upper
- * @*: string
+ * @str: string
  *
+ * Return: str
  */
 
-char *string_toupper(char *)
+char *string_toupper(char *str)
 {
 	int i = 0;
 
