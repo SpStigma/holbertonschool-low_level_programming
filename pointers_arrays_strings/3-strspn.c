@@ -5,17 +5,17 @@
  * @s: string
  * @accept: prefix
  *
- * Return: count 
+ * Return: count
  */
 
 unsigned int _strspn(char *s, char *accept)
 {
-	int i;
-	int count;
+	int i = 0;
+	int count = 0;
 
-	while (s[i] != '\0' && accept[i] != '\0')
+	while (s[i] != '\0' && accept[count] != '\0')
 	{
-		if (s[i] == accept[i])
+		if (s[i] == accept[count])
 		{
 			count++;
 		}
@@ -23,5 +23,3 @@ unsigned int _strspn(char *s, char *accept)
 	}
 	return (count);
 }
-
-
