@@ -23,5 +23,5 @@ void print_diagsums(int *a, int size)
 		l++;
 		c++;
 	}
-	printf("%d, %d", sum1, sum2);
+	printf("%d, %d\n", sum1, sum2);
 }
