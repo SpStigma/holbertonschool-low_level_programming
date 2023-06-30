@@ -20,7 +20,7 @@ char *leet(char *s)
 	{
 		for (i = 0 ; code[i] != '\0' ; i++)
 		{
-			if (s[lenght] == letters[i] || s[lenght] == letters[i] - 32)
+			if (s[lenght] == id[i] || s[lenght] == id[i] - 32)
 			{
 				s[lenght] = code[i];
 			}
