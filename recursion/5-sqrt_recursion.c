@@ -5,10 +5,10 @@
  * @result: result of multiplier
  * @multiplier: to check the sqare of root
  *
- * Return: the sqare root 
+ * Return: the sqare root
  */
 
-int _sqrt( int result, int multiplier)
+int _sqrt(int result, int multiplier)
 {
 	if (multiplier * multiplier == result)
 	{
@@ -20,7 +20,7 @@ int _sqrt( int result, int multiplier)
 	}
 	else
 	{
-		return(_sqrt(result, multiplier + 1));
+		return (_sqrt(result, multiplier + 1));
 	}
 }
 
