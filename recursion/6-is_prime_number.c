@@ -8,7 +8,7 @@
  * Return: to sucess the number is prime
  */
 
-int _prime(int divisor, int result)
+int _prime(int result, int divisor)
 {
 	if (divisor * divisor > result)
 	{
