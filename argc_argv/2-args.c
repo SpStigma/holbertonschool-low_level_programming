@@ -5,11 +5,14 @@
  * main - affiche tout les arguments avec saut de ligne
  * @argc: nbr d'arguments
  * @argv: afficahge des arguments
+ *
+ * Return: to sucess
  */
 
 int main(int argc, char *argv[])
 {
 	int i;
+
 	for (i = 0 ; i < argc ; i++)
 	{
 		printf("%s\n", argv[i]);
