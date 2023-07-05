@@ -22,8 +22,9 @@ int main(int argc, char *argv[])
 	for (j = 1 ; j < argc ; j++)
 	{
 		char *arg = argv[j];
-		int isDigit = 1 ;
-		for ( i = 0 ; arg[i] != '\0' ; i++)
+		int isDigit = 1;
+
+		for (i = 0 ; arg[i] != '\0' ; i++)
 		{
 			if (!isdigit(arg[i]))
 			{
