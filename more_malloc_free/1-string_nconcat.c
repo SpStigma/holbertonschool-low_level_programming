@@ -2,10 +2,11 @@
 #include <stdlib.h>
 
 /**
- * string_nconcat
- *
- *
- *
+ * string_nconcat - concat n byte of s2
+ * @s1: string 1
+ * @s2: string 2
+ * @n: n bytes of s2
+ * Return: concat s1 et s2 with n bytes of s2
  */
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
