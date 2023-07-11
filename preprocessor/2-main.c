@@ -1,12 +1,12 @@
 #include <stdio.h>
 
 /**
- * void - write the name file with macro file
+ * main - write the name file with macro file
  *
  *Return: 0 to sucess
  */
 
-int main(void) 
+int main(void)
 {
 	printf("%s\n", __FILE__);
 	return (0);
