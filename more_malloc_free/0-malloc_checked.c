@@ -5,7 +5,7 @@
 /**
  * malloc_checked - malloc check
  * @b: number ti multiply
- * 
+ *
  * Return: pointer
  */
 void *malloc_checked(unsigned int b)
