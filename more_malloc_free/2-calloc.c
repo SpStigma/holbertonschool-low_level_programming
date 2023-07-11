@@ -2,9 +2,11 @@
 #include <stdlib.h>
 
 /**
+ * _calloc - calloc fct
+ * @nmemb: array
+ * @size: taille
  *
- *
- *
+ * Return: ptr
  */
 
 void *_calloc(unsigned int nmemb, unsigned int size)
@@ -14,21 +16,20 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	unsigned int *byteptr = NULL;
 	unsigned int i;
 
-	  if (nmemb == 0 || size == 0) 
+	  if ((nmemb == 0) || (size == 0))
 	  {
 		  return (NULL);
 	  }
 
 	  ptr = malloc(total);
 
-	  if (ptr != NULL)
+	  if (ptr == NULL)
 	  {
 		  byteptr = ptr;
 		  for (i = 0; i < total; i++)
 		  {
-			  byteptr[i] = 0;
+			byteptr[i] = 0;
 		  }
 	  }
 	  return (ptr);
 }
-
