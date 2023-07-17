@@ -6,6 +6,7 @@ struct dog
 	char *name;
 	float age;
 	char *owner;
+	/* struct identity of a dog */
 };
 
 #endif
