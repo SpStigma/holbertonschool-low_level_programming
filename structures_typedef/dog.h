@@ -3,9 +3,9 @@
 
 struct dog
 {
-	char name[200];
+	char *name;
 	float age;
-	char owner[200]
-}
+	char *owner;
+};
 
 #endif
