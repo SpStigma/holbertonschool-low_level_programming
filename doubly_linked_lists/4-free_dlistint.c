@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * free_dlistinct - Function that frees a doubly linked lists
+ * free_dlistint - Function that frees a doubly linked lists
  * @head: pointer to the first node
  *
  */
