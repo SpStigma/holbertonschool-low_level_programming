@@ -1,10 +1,12 @@
 #include "lists.h"
 
 /**
+ * insert_dnodeint_at_index - fct that inserts a new node at a given position.
+ * @h: a pointer to a pointer of the first node
+ * @idx: the place to add a list
+ * @n: the int to be stored in the new node
  *
- *
- *
- *
+ * Return: new_node
  */
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
@@ -48,7 +50,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	/* Condition to the case where ptr reach the end */
 	if (count == idx && ptr == NULL)
 	{
-		return(add_dnodeint_end(h, n));
+		return (add_dnodeint_end(h, n));
 	}
 	else
 	{	/* if idx is out of range */
