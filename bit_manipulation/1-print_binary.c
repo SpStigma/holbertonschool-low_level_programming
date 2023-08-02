@@ -8,8 +8,9 @@
 void print_binary(unsigned long int n)
 {
 	unsigned long int mask = 1UL << (sizeof(unsigned long int) * 8 - 1);
+	int i = 0;
 
-		for (int i = 0; i < sizeof(unsigned long int) * 8; i++)
+		for (; i < sizeof(unsigned long int) * 8; i++)
 		{
 			putchar((n & mask) ? '1' : '0');
 			mask >>= 1;
