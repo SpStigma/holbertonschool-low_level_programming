@@ -29,7 +29,7 @@ int open_destination_file(char *filename)
 {
 	int fd;
 
-	fd = open(filename, O_WRONLY | O_CREAT | O_TRUNC, 0644);
+	fd = open(filename, O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR);
 	if (fd == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", filename);
