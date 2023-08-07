@@ -89,6 +89,8 @@ int main(int argc, char *argv[])
 	source_fd = open_source_file(file_from);
 	if (source_fd == -1)
 	{
+		close(source_fd);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
 		exit(98);
 	}
 
@@ -96,6 +98,7 @@ int main(int argc, char *argv[])
 	if (destination_fd == -1)
 	{
 		close(source_fd);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
 		exit(99);
 	}
 
