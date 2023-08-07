@@ -30,7 +30,8 @@ int open_destination_file(char *filename)
 {
 	int fd;
 
-	fd = open(filename, O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH);
+	fd = open(filename, O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR |
+			S_IRGRP | S_IWGRP | S_IROTH);
 	if (fd == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", filename);
@@ -61,6 +62,7 @@ int copy_file_content(int source_fd, int destination_fd)
 
 	if (bytes_read == -1)
 	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file\n");
 		return (98);
 	}
 
