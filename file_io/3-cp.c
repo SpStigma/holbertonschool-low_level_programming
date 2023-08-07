@@ -89,31 +89,25 @@ int main(int argc, char *argv[])
 	source_fd = open_source_file(file_from);
 	if (source_fd == -1)
 	{
-		close(source_fd);
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
 		exit(98);
 	}
 
 	destination_fd = open_destination_file(file_to);
-	if (destination_fd == -1)
-	{
-		close(source_fd);
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
-		exit(99);
-	}
 
 	copy_result = copy_file_content(source_fd, destination_fd);
 
 	if (close(source_fd) == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %s\n", file_from);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", source_fd);
 		exit(100);
 	}
 
 	if (close(destination_fd) == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %s\n", file_to);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", destination_fd);
 		exit(100);
 	}
 	return (copy_result);
+
 }
