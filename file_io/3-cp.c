@@ -54,14 +54,14 @@ int copy_file_content(int source_fd, int destination_fd)
 		if (write(destination_fd, buffer, bytes_read) != bytes_read)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to file\n");
-			return (99);
+			exit(99);
 		}
 	}
 
 	if (bytes_read == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file\n");
-		return (98);
+		exit(98);
 	}
 
 	return (0);
@@ -84,19 +84,19 @@ int main(int argc, char *argv[])
 	if (argc != 3)
 	{
 		dprintf(STDERR_FILENO, "Usage: %s file_from file_to\n", argv[0]);
-		return (97);
+		exit(97);
 	}
 	source_fd = open_source_file(file_from);
 	if (source_fd == -1)
 	{
-		return (98);
+		exit(98);
 	}
 
 	destination_fd = open_destination_file(file_to);
 	if (destination_fd == -1)
 	{
 		close(source_fd);
-		return (99);
+		exit(99);
 	}
 
 	copy_result = copy_file_content(source_fd, destination_fd);
@@ -104,7 +104,7 @@ int main(int argc, char *argv[])
 	if (close(source_fd) == -1 || close(destination_fd) == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close file descriptor\n");
-		return (100);
+		exit(100);
 	}
 	return (copy_result);
 }
