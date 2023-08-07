@@ -55,13 +55,13 @@ int copy_file_content(int source_fd, int destination_fd)
 	{
 		if (write(destination_fd, buffer, bytes_read) != bytes_read)
 		{
-			exit(99);
+			return (99);
 		}
 	}
 
 	if (bytes_read == -1)
 	{
-		exit(98);
+		return (98);
 	}
 
 	return (0);
