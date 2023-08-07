@@ -33,6 +33,7 @@ int open_destination_file(char *filename)
 	if (fd == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", filename);
+		exit(99);
 	}
 	return (fd);
 }
