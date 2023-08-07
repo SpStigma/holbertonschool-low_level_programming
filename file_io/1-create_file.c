@@ -1,46 +1,48 @@
 #include "main.h"
 
 /**
+ * create_file - Creates a file with specified content
+ * and permissions.
+ * @filename: Name of the file to create
+ * @text_content: NULL-terminated string to write to the file.
  *
- *
- *
- *
+ * Return: 1 sucess, -1 on failure
  */
 int create_file(const char *filename, char *text_content)
 {
 	int fd = -1;
 	ssize_t bytes_written = 0;
 	size_t content_size = 0;
-	char *current = NULL;
+	char *current = text_content;
 
-	if (filename == NULL || text_content == NULL)
+	if (filename == NULL)
 	{
 		return (-1);
 	}
+	if (text_content == NULL)
+	{
+		text_content = "";
+	}
 
-	fd = open("filename", O_WRONLY | O_CREAT | O_TRUNC);
+	fd = open(filename, O_WRONLY | O_CREAT | O_TRUNC);
 
 	if (fd == -1)
 	{
 		return (-1);
 	}
-	
-	current = text_content;
-
 	while (*current != '\0')
 	{
 		content_size++;
 		current++;
 	}
-	if (text_content != NULL)
-	{
-		bytes_written = write(fd, text_content, content_size);
-		if (bytes_written == -1)
+
+	bytes_written = write(fd, text_content, content_size);
+	if (bytes_written != (ssize_t)content_size)
 		{
 			close(fd);
 			return (-1);
 		}
-	}
+	
 	close(fd);
 	return (1);
 }
