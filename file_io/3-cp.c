@@ -104,9 +104,15 @@ int main(int argc, char *argv[])
 
 	copy_result = copy_file_content(source_fd, destination_fd);
 
-	if (close(source_fd) == -1 || close(destination_fd) == -1)
+	if (close(source_fd) == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_from || file_to);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %s\n", file_from);
+		exit(100);
+	}
+
+	if (close(destination_fd) == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %s\n", file_to);
 		exit(100);
 	}
 	return (copy_result);
