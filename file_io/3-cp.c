@@ -103,7 +103,7 @@ int main(int argc, char *argv[])
 
 	if (close(source_fd) == -1 || close(destination_fd) == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd\n");
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_from || file_to);
 		exit(100);
 	}
 	return (copy_result);
