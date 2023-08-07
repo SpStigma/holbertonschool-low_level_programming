@@ -33,7 +33,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		close(fd);
 		return (0);
 	}
-	bytes_read = read(file, taille_file, letters);
+	bytes_read = read(fd, taille_file, letters);
 	if (bytes_read > 0)
 	{
 		printf("%s\n", taille_file);
@@ -43,6 +43,6 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		printf("Fail to read");
 	}
 	free(taille_file);
-	close(file);
+	close(fd);
 	return (bytes_read);
 }
