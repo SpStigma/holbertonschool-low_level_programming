@@ -53,7 +53,7 @@ int copy_file_content(int source_fd, int destination_fd)
 	{
 		if (write(destination_fd, buffer, bytes_read) != bytes_read)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't write to file\n");
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
 			exit(99);
 		}
 	}
@@ -103,7 +103,7 @@ int main(int argc, char *argv[])
 
 	if (close(source_fd) == -1 || close(destination_fd) == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close file descriptor\n");
+		dprintf(STDERR_FILENO, "Error: Can't close fd\n");
 		exit(100);
 	}
 	return (copy_result);
