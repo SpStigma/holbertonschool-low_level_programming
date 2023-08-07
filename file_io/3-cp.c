@@ -47,7 +47,7 @@ int open_destination_file(char *filename)
  *
  * Return: 0 on sucess, 98if read error, 99 if write error
  */
-int copy_file_content(int source_fd, int destination_fd)
+int copy_file_content(int source_fd, int destination_fd, const char *source_filename)
 {
 	char buffer[1024];
 	ssize_t bytes_read;
@@ -62,7 +62,7 @@ int copy_file_content(int source_fd, int destination_fd)
 
 	if (bytes_read == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file\n");
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", source_filename);
 		return (98);
 	}
 
@@ -93,7 +93,7 @@ int main(int argc, char *argv[])
 
 	destination_fd = open_destination_file(file_to);
 
-	copy_result = copy_file_content(source_fd, destination_fd);
+	copy_result = copy_file_content(source_fd, destination_fd, file_from);
 
 	if (close(source_fd) == -1)
 	{
@@ -107,5 +107,4 @@ int main(int argc, char *argv[])
 		exit(100);
 	}
 	return (copy_result);
-
 }
