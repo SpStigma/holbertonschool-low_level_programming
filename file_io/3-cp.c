@@ -53,7 +53,6 @@ int copy_file_content(int source_fd, int destination_fd)
 	{
 		if (write(destination_fd, buffer, bytes_read) != bytes_read)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't write to %d\n", destination_fd);
 			exit(99);
 		}
 	}
