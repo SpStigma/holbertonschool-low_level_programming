@@ -12,7 +12,7 @@ int create_file(const char *filename, char *text_content)
 {
 	int fd = -1;
 	ssize_t bytes_written = 0;
-	size_t content_size = 0;
+	ssize_t content_size = 0;
 	char *current = text_content;
 
 	if (filename == NULL)
@@ -24,7 +24,7 @@ int create_file(const char *filename, char *text_content)
 		text_content = "";
 	}
 
-	fd = open(filename, O_WRONLY | O_CREAT | O_TRUNC);
+	fd = open(filename, O_WRONLY | O_CREAT | O_TRUNC | S_IRUSR | S_IWUSR);
 
 	if (fd == -1)
 	{
@@ -37,12 +37,11 @@ int create_file(const char *filename, char *text_content)
 	}
 
 	bytes_written = write(fd, text_content, content_size);
-	if (bytes_written != (ssize_t)content_size)
-		{
-			close(fd);
-			return (-1);
-		}
-	
+	if (bytes_written != content_size)
+	{
+		close(fd);
+		return (-1);
+	}
 	close(fd);
 	return (1);
 }
