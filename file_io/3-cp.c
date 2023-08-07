@@ -58,7 +58,7 @@ int copy_file(int src_fd, int dest_fd, const char *src, const char *dest)
 	{
 		if (write(dest_fd, buffer, bytes_read) != bytes_read)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't write to test %s\n", dest);
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", dest);
 			return (99);
 		}
 	}
