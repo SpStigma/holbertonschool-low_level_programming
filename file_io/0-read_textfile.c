@@ -10,9 +10,10 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int fd;
-	char *taille_file;
-	ssize_t bytes_read;
+	int fd = 0;
+	char *taille_file = NULL;
+	ssize_t bytes_read = 0;
+	ssize_t bytes_written = 0;
 
 	if (filename == NULL)
 	{
@@ -30,19 +31,13 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	if (taille_file == NULL)
 	{
+		free(taille_file);
 		close(fd);
 		return (0);
 	}
 	bytes_read = read(fd, taille_file, letters);
-	if (bytes_read > 0)
-	{
-		printf("%s\n", taille_file);
-	}
-	else
-	{
-		printf("Fail to read");
-	}
+	bytes_written = write(STDOUT_FILENO, taille_file, bytes_read);
 	free(taille_file);
 	close(fd);
-	return (bytes_read);
+	return (bytes_written);
 }
