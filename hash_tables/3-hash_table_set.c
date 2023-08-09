@@ -1,14 +1,16 @@
 #include "hash_tables.h"
 
 /**
+ * hash_table_set - function that adds an element to the hash table.
+ * @key: the key
+ * @value: value
  *
- *
- *
+ * @return: 1 if succed
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int i = 0;
-	hash_node_t *new_node = NULL, *temp_node = NULL;
+	hash_node_t *new_node = NULL;
 
 	if (ht == NULL || key == NULL || *key == '\0')
 	{
